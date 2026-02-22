@@ -10,6 +10,9 @@
     <meta name="description" content="">
     <meta property="og:image" content="images/link_image.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,15 +29,73 @@
     </script>
 </head>
 <body data-theme="dark">
-    <button class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-    </button>
+    <header class="site-header">
+        <a href="#home" class="header-logo">Zoe Mavroeidi</a>
+        <nav class="header-nav">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a href="#contact" class="btn-outline header-cta">Get in Touch</a>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span class="highlight">Zoe Mavroeidi</span></h1>
-            <p class="subtitle">Venture Capital Researcher @ CrunchDAO 📍</p>
-            <p class="subtitle">Abu Dhabi / Dubai, UAE 🇦🇪</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <p class="hero-status">// DEFI · PORTFOLIO INFRASTRUCTURE · ORION FINANCE</p>
+                <h1 class="hero-headline">Institutional <span class="bracket">[</span>Portfolio Management<span class="bracket">]</span> in DeFi</h1>
+                <p class="hero-tagline">Co-founder & CTO at Orion Finance. Vault infrastructure for verifiable, privacy-preserving portfolio management, bridging institutional standards with DeFi innovation.</p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn-outline">View Work</a>
+                    <a href="#contact" class="btn-outline">Get in Touch >>></a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-orbit-glow" aria-hidden="true"></div>
+                <div class="hero-orbit-wrap" aria-hidden="true">
+                    <div class="hero-orbit-circles">
+                        <span class="hero-orbit-ring hero-orbit-ring-1"></span>
+                        <span class="hero-orbit-ring hero-orbit-ring-2"></span>
+                        <span class="hero-orbit-ring hero-orbit-ring-3"></span>
+                        <span class="hero-orbit-ring hero-orbit-ring-4"></span>
+                    </div>
+                    <!-- Languages & Frameworks (inner orbits) -->
+                    <div class="hero-orbit hero-orbit-inner">
+                        <span class="hero-orbit-icon" style="--angle: 0deg"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 72deg"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 144deg"><img src="https://cdn.simpleicons.org/keras/D00000" alt="Keras" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 216deg"><img src="https://cdn.simpleicons.org/r/276DC3" alt="R" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 288deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="MATLAB" class="hero-orbit-img"></span>
+                    </div>
+                    <div class="hero-orbit hero-orbit-mid">
+                        <span class="hero-orbit-icon" style="--angle: 0deg"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 60deg"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 120deg"><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="Next.js" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 180deg"><img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 240deg"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 300deg"><img src="https://cdn.simpleicons.org/deno/000000" alt="Deno" class="hero-orbit-img"></span>
+                    </div>
+                    <!-- Tools & Technologies (outer orbits) -->
+                    <div class="hero-orbit hero-orbit-outer">
+                        <span class="hero-orbit-icon" style="--angle: 0deg"><img src="https://cdn.simpleicons.org/selenium/43B02A" alt="Selenium" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 90deg"><img src="https://cdn.simpleicons.org/github/c9d1d9" alt="GitHub" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 180deg"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 270deg"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" class="hero-orbit-img"></span>
+                    </div>
+                    <div class="hero-orbit hero-orbit-outermost">
+                        <span class="hero-orbit-icon" style="--angle: 0deg"><img src="https://cdn.simpleicons.org/blender/F5792A" alt="Blender" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 90deg"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 180deg"><img src="https://cdn.simpleicons.org/latex/008080" alt="LaTeX" class="hero-orbit-img"></span>
+                        <span class="hero-orbit-icon" style="--angle: 270deg"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="Database" class="hero-orbit-img"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -43,21 +104,21 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hi, I'm Zoe, an engineer, researcher, and product thinker passionate about leveraging technology to solve complex problems. I specialize in the intersection of engineering, artificial intelligence, and Web3, with a focus on building data-driven solutions that create meaningful impact.</p>
+                    <p>Hi, I'm Zoe, an engineer, researcher, and product thinker passionate about leveraging technology to solve complex problems. I specialize in the intersection of engineering, artificial intelligence, and Web3, with a focus on building data-driven infrastructure that creates meaningful impact.</p>
 
-                    <p>Currently, I lead the Venture Capital Project at CrunchDAO, where I've built an end-to-end pipeline that includes data ingestion, machine learning predictions, backtesting, A/B testing, and an interactive investment dashboard, all designed to make early-stage investment decisions more structured and scalable. Working with a heavily imbalanced dataset and noisy signals, my goal is to bring order and insight to one of the most unpredictable asset classes.</p>
-                        
-                    <p>Before that, I conducted research at the Luxembourg Institute of Health, where I studied how vocal biomarkers evolved over the 14-day period of infection in COVID-19 patients. That project gave me the opportunity to code signal-processing models and design the UI for the COLIVE app.</p>
+                    <p>I'm Co-founder and CTO at <a href="https://www.orionfinance.ai" target="_blank" rel="noopener noreferrer">Orion Finance</a>, building institutional-grade portfolio management in DeFi. We deliver vault infrastructure for verifiable, privacy-preserving portfolio management, smart contract infrastructure that automates asset management and safeguards strategy confidentiality using Fully Homomorphic Encryption (FHE). My work bridges traditional institutional standards with DeFi innovation.</p>
+
+                    <p>Before Orion, I led the Venture Capital Project at CrunchDAO, where I built an end-to-end pipeline for data-driven investment decisions: data ingestion, ML predictions, backtesting, and an interactive investment dashboard processing data for over 2M startups and 28M founders. Earlier, I conducted research at the Luxembourg Institute of Health on vocal biomarkers in COVID-19 patients and designed the UI for the COLIVE app.</p>
                         
                     <p>Outside of work, you'll find me co-leading Highlanders in Clash of Clans, dropping into Verdansk, out on the football pitch, carving down a mountain, listening to music, or exploring 3D animation; always learning, always building.</p>
-                    <div class="button-group">
-                        <a href="https://drive.google.com/file/d/1_JTXQy1TYDj6ADnZ5wgSUpA1wfjpffTF/view?usp=sharing" class="cv-button" download>
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1eS2Gms3l62G6oLtjQFO9Mmtz_pAEqSYD?usp=sharing" class="cv-button">
-                            <i class="fas fa-heart"></i> Side Quests
-                        </a>
-                    </div>
+                </div>
+                <div class="button-group">
+                    <a href="https://drive.google.com/file/d/1_JTXQy1TYDj6ADnZ5wgSUpA1wfjpffTF/view?usp=sharing" class="cv-button" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1eS2Gms3l62G6oLtjQFO9Mmtz_pAEqSYD?usp=sharing" class="cv-button">
+                        <i class="fas fa-heart"></i> Side Quests
+                    </a>
                 </div>
             </div>
         </div>
@@ -69,13 +130,28 @@
             <div class="experience-item">
                 <div class="experience-content">
                     <div class="experience-details">
+                        <h3>Co-founder & CTO</h3>
+                        <h4>Orion Finance</h4>
+                        <p class="location">Remote</p>
+                        <p class="date">2025 - Present</p>
+                    </div>
+                    <div class="experience-description">
+                        <p>Building institutional-grade portfolio management infrastructure in DeFi. Orion delivers vault infrastructure for verifiable, privacy-preserving portfolio management—smart contract infrastructure that automates asset management and safeguards strategy confidentiality using Fully Homomorphic Encryption (FHE).</p>
+                        <p>Bridging traditional institutional standards with DeFi innovation; enabling operational efficiency, 24/7 markets, confidential execution, and built-in accounting for portfolio managers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-content">
+                    <div class="experience-details">
                         <h3>Venture Capital Researcher</h3>
                         <h4>CrunchDAO</h4>
                         <p class="location">Abu Dhabi, UAE</p>
-                        <p class="date">Oct '23 - Present</p>
+                        <p class="date">Oct '23 - 2025</p>
                     </div>
                     <div class="experience-description">
-                        <p>Leading the Venture Capital Project as Product Owner, where I've built an end-to-end pipeline for data-driven investment decisions. The system processes data for over 2M startups and 28M founders, incorporating ETL processes, machine learning predictions, and backtesting capabilities.</p>
+                        <p>Led the Venture Capital Project as Product Owner, building an end-to-end pipeline for data-driven investment decisions. The system processes data for over 2M startups and 28M founders, incorporating ETL processes, machine learning predictions, and backtesting capabilities.</p>
                         <p>Developed an XGBoost classifier for startup success prediction and designed an interactive dashboard for startup evaluation.</p>
                     </div>
                 </div>
@@ -231,8 +307,13 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
+    <footer class="status-footer">
+        <div class="status-bar">
+            <span class="status-left">ALL SYSTEMS NOMINAL</span>
+            <span class="status-center">LOCATION: Abu Dhabi / Dubai</span>
+            <span class="status-right">PORTFOLIO v1.0 · UTC <span id="utc-time">--:--:--</span></span>
+        </div>
+        <div class="footer-copyright">
             <p>&copy; 2024 Zoe Mavroeidi. All rights reserved.</p>
         </div>
     </footer>

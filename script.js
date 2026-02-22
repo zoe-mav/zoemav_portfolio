@@ -71,9 +71,10 @@ window.addEventListener('scroll', () => {
 // Theme toggle functionality
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
     const icon = themeToggle.querySelector('i');
-    
-    // Check for saved theme preference
+    if (!icon) return;
+
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.body.setAttribute('data-theme', savedTheme);
     updateIcon(savedTheme === 'light');
@@ -81,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.body.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
         document.body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme === 'light');
@@ -90,6 +90,49 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateIcon(isLight) {
         icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
     }
+});
+
+// Footer UTC time
+function updateUtcTime() {
+    const el = document.getElementById('utc-time');
+    if (!el) return;
+    const now = new Date();
+    const utc = now.getUTCHours().toString().padStart(2, '0') + ':' +
+        now.getUTCMinutes().toString().padStart(2, '0') + ':' +
+        now.getUTCSeconds().toString().padStart(2, '0');
+    el.textContent = utc;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    updateUtcTime();
+    setInterval(updateUtcTime, 1000);
+});
+
+// Nav scroll-spy: set .active on the link for the current section
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.header-nav .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    function setActive() {
+        const scrollY = window.scrollY;
+        const headerOffset = 80;
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - headerOffset;
+            const height = section.offsetHeight;
+            if (scrollY >= top && scrollY < top + height) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', setActive);
+    window.addEventListener('load', setActive);
 });
 
 // Scroll to Top Button
